@@ -1,4 +1,6 @@
 from setuptools import setup
+from setuptools import find_packages, setup
+
 
 setup(
         name='entrywise-l1-NMF',
@@ -7,10 +9,9 @@ setup(
         url='https://github.com/jamiehadd/entrywise-l1-NMF',
         author='Toby Anderson, Jamie Haddock, Alicia Lu',
         author_email='allu@g.hmc.edu, tobanderson@g.hmc.edu',
+        packages=find_packages(where="src"),
+        package_dir={"": "src"},
         license='MIT',
-        packages=[
-            'entrywise-l1-NMF'
-        ],
         install_requires=[
             'numpy'
         ]
